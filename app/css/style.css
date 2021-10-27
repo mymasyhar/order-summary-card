@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Inconsolata:wght@400;500;700&family=Lexend+Deca&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-pale-blue: hsl(225, 100%, 94%);
+  --color-bright-blue: hsl(245, 75%, 52%);
+  --color-very-pale-blue: hsl(225, 100%, 98%);
+  --color-desaturated-blue: hsl(224, 23%, 55%);
+  --color-dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1rem;
+  background-image: url('../images/pattern-background-mobile.svg');
+  background-repeat: no-repeat;
+}
+
+.card__container {
+  background-color: #fff;
+  max-width: 20rem;
+  border-radius: 1.125rem;
+  margin: 6.25rem auto;
+  padding-bottom: 3.25rem;
+  box-shadow: 0px 4px 30px var(--color-pale-blue);
+}
+
+.card__container img {
+  border-top-left-radius: 1.125rem;
+  border-top-right-radius: 1.125rem;
+  max-width: 20rem;;
+}
+
+.card__container h2{
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.card__container > p {
+  text-align: center;
+  padding: 0 1.5rem;
+  color: var(--color-desaturated-blue);
+}
+
+.card__plan > a:hover {
+  opacity: .75;
+  text-decoration: none;
+}
+
+.card__plan {
+  display: flex;
+  background-color: var(--color-very-pale-blue);
+  padding: 1rem;
+  align-items: center;
+  max-width: 17.5rem;
+  border-radius: 0.625rem;
+  margin: 1.875rem auto;
+  gap: 1.25rem;
+}
+
+.card__info {
+  margin-right: 1rem;
+}
+
+.card__button--group {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card__button--group button {
+  width: 17.5rem;
+  border: none;
+  padding: 1rem;
+  margin-bottom: 2.25rem;
+  border-radius: 0.625rem;
+  background-color: var(--color-bright-blue);
+  color: var(--color-very-pale-blue);
+  cursor: pointer;
+  box-shadow: 0 3px 10px var(--color-desaturated-blue);
+}
+
+.card__button--group button:hover{
+  opacity: .75;
+}
+
+.card__button--group a {
+  color: var(--color-desaturated-blue);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.card__button--group a:hover {
+  color: #000;
+  font-weight: bold;
+}
+
+footer {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer p>a {
+  text-decoration: none;
+}
+
+/* responsive rules */
+
+@media (min-width: 376px){
+  body {
+    background-image: url('../images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+  }
+  .card__container, .card__container img {
+    max-width: 28.125rem;
+  }
+
+  .card__container > p {
+    max-width: 18.3125rem;
+    margin: 0 auto;
+  }
+
+  .card__plan{
+    max-width: 22.0625rem;
+  }
+
+  .card__info {
+    margin-right: 5rem;
+  }
+
+  .card__button--group{
+    max-width: 22.0625rem;
+    margin: 0 3rem;
+  }
+
+  .card__button--group button{
+    width: 100%;
+  }
+}
