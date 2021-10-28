@@ -17,15 +17,23 @@
 body {
   font-family: 'Red Hat Display', sans-serif;
   font-size: 1rem;
-  background-image: url('../images/pattern-background-mobile.svg');
+  background-image: url('../images/pattern-background-desktop.svg');
   background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e0e8ff;
 }
 
 .card__container {
   background-color: #fff;
+  width: 100%;
   max-width: 20rem;
   border-radius: 1.125rem;
-  margin: 6.25rem auto;
+  margin: 5rem auto;
   padding-bottom: 3.25rem;
   box-shadow: 0px 4px 30px var(--color-pale-blue);
 }
@@ -33,7 +41,8 @@ body {
 .card__container img {
   border-top-left-radius: 1.125rem;
   border-top-right-radius: 1.125rem;
-  max-width: 20rem;;
+  width: 100%;
+  display: block;
 }
 
 .card__container h2{
@@ -57,16 +66,21 @@ body {
 .card__plan {
   display: flex;
   background-color: var(--color-very-pale-blue);
-  padding: 1rem;
+  padding: 1.5rem;
+  justify-content: flex-start;
   align-items: center;
-  max-width: 17.5rem;
+  width: 90%;
   border-radius: 0.625rem;
   margin: 1.875rem auto;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .card__info {
-  margin-right: 1rem;
+  margin-right: 1.5rem;
+}
+
+.card__plan img {
+  width: 3rem;
 }
 
 .card__button--group {
@@ -75,7 +89,8 @@ body {
 }
 
 .card__button--group button {
-  width: 17.5rem;
+  width: 100%;
+  max-width: 90%;
   border: none;
   padding: 1rem;
   margin-bottom: 2.25rem;
@@ -84,6 +99,7 @@ body {
   color: var(--color-very-pale-blue);
   cursor: pointer;
   box-shadow: 0 3px 10px var(--color-desaturated-blue);
+  transition: all 0.2s;
 }
 
 .card__button--group button:hover{
@@ -94,6 +110,7 @@ body {
   color: var(--color-desaturated-blue);
   font-weight: 500;
   text-decoration: none;
+  transition: all 0.2s;
 }
 
 .card__button--group a:hover {
@@ -109,6 +126,7 @@ footer {
 
 footer p>a {
   text-decoration: none;
+  transition: all 0.2s;
 }
 
 /* responsive rules */
@@ -128,15 +146,15 @@ footer p>a {
   }
 
   .card__plan{
-    max-width: 22.0625rem;
+    max-width: 75%;
   }
 
   .card__info {
-    margin-right: 5rem;
+    margin-right: 1rem;
   }
 
   .card__button--group{
-    max-width: 22.0625rem;
+    max-width: 100%;
     margin: 0 3rem;
   }
 
