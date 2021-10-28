@@ -76,11 +76,7 @@ body {
 }
 
 .card__info {
-  margin-right: 5rem;
-}
-
-.card__plan > a {
-  margin: 0 0 0 auto;
+  margin-right: 1rem;
 }
 
 .card__plan img {
@@ -94,7 +90,7 @@ body {
 
 .card__button--group button {
   width: 100%;
-  max-width: 95%;
+  max-width: 90%;
   border: none;
   padding: 1rem;
   margin-bottom: 2.25rem;
@@ -136,7 +132,7 @@ footer p>a {
 
 /* responsive rules */
 
-@media (min-width: 376px){
+@media (max-width: 375px){
   body {
     background-image: url('../images/pattern-background-desktop.svg');
     background-repeat: no-repeat;
@@ -152,6 +148,7 @@ footer p>a {
 
   .card__plan{
     max-width: 75%;
+    gap: 0;
   }
 
   .card__info {
